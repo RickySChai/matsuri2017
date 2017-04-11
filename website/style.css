@@ -1,0 +1,10 @@
+header {
+  text-align: center;
+  background-image: url("img/homebg.png");
+  color: white;
+  height: 100vh;
+}
+
+.intro-text {
+	margin-top: 200px;
+}
