@@ -53,3 +53,15 @@ h2 {
 #booths, #contact {
   background-color: #81495F;
 }
+
+#directions {
+  height: 94vh;
+  background-image: url("img/background/directionsbg.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+}
+
+.navbar {
+	height:5vh;
+}
