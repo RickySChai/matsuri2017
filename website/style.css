@@ -104,3 +104,9 @@ h2 {
 .navbar {
 	height:5vh;
 }
+
+#contactinfo {
+  background: rgba(255,255,255,0.2);
+  padding: 8%;
+  color: white;
+}
