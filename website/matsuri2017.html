@@ -21,11 +21,11 @@
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
+        <div class="navbar-header page-scroll" id="navbar-logo-side">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
           </button>
-          <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+          <a class="navbar-brand" href="#page-top"><img id="jsalogo"  src="img/logos/logo.png" alt="logo"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -69,8 +69,9 @@
           <div class="col-lg-12">
             <div class="intro-text">
               <img class="img-responsive" src="img/headings/matsuri.png" alt="matsuri">
-              <h1 class="name">Start Bootstrap</h1>
-              <hr class="star-light">
+              <h1 class="location">Japan Festival at University of Washington</h1>
+              
+              <h2 class="date">May 6th 2017 5–9PM</h2>
             </div>
           </div>
         </div>
@@ -90,7 +91,6 @@
             What is JSA UW?
             JSA UW, or the Japanese Student Association at University of Washington, is a student organization dedicated to celebrating and proliferating both Japanese and American culture. We offer events throughout the year designed to inform students about various traditions and practices in Japan and America in a fun, social environment.
             </p> 
-            <hr class="star-primary">
           </div>
         </div>
       </div>
@@ -101,19 +101,21 @@
           <div class="col-lg-12 text-center">
             <img class="img-responsive" src="img/headings/performance.png" alt="what is matsuri">
             <h2>Main Performer</h2>
-            <div class="container">
-            <div id="yamashita"><img class="img-responsive" src="img/performers/Ayumu-Yamashita.png"/></div>
-            <div id="yamashitap">
-              <h3>Ayumu Yamashita</h3>
-              <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id nisl ut metus tristique tempus. Praesent at ante eu risus varius ultricies nec eget erat. Donec sed lacinia erat, quis malesuada metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id nisl ut metus tristique tempus. Praesent at ante eu risus varius ultricies nec eget erat. Donec sed lacinia erat, quis malesuada metus.
-              </p>
-            </div>
+            <div class="container" id="main-performer">
+							<div id="yamashita"><img class="img-responsive" src="img/performers/Ayumu-Yamashita.jpg"/></div>
+							<div id="yamashitap">
+								<h3>Ayumu Yamashita</h3>
+								<p>
+									Ayumu Yamashita is a musician and filmmaker who has found a substantial following on YouTube, performing original songs and covers of popular favorites. He has a wonderful voice and a warm personality, and we can’t wait to see him own the stage at Matsuri!
+									<br>
+									<br>
+									Click <a href="https://www.youtube.com/user/ayumu822">here</a> to check out his Youtube Channel
+								</p>
+							</div>
             </div>
             <div id="student">
               <h2>Student Performers</h2>
             </div>
-            <hr class="star-primary">
           </div>
         </div>
       </div>
@@ -188,7 +190,6 @@
                   </h3>
                 </div>
               </div>
-              <hr class="star-primary">
             </div>
           </div>
         </div>
@@ -196,22 +197,82 @@
     </section> 
 
     <section id="directions">
-      <div class="container">
-        <div class="row">
+      <div class="container-fluid" id="map-container">
+        <div class="row" id="map">
           <div class="col-lg-12 text-center">
             <img class="img-responsive" src="img/headings/directions.png" alt="directions">
-            <hr class="star-primary">
+            <div class="overlay" onClick="style.pointerEvents='none'"></div>
+            <iframe
+							width="100%"
+							height="350"
+							frameborder="0" style="border:0; margin-top:28px;"
+							src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAvY6IaAfrtYWayfD-nhd3CMN2KDwmFsgc
+							&q=Husky+Union+Building" allowfullscreen>
+						</iframe>
           </div>
         </div>
-      </div>
+      </div> 
+      <div class="container">  
+        <div class="row" id ="direction-text">
+        	<div class="col-lg-4">
+        		<h3>
+        		Location
+        		</h3>
+        		<p>
+        		University of Washington
+						<br>
+						Husky Union Building
+						<br>
+						North Ballroom
+        		</p>
+        	</div>
+        	<div class="col-lg-4">
+        		<h3>
+        		Address
+        		</h3>
+        		<p>
+        		University of Washington
+						<br>
+						Husky Union Building
+						<br>
+						Seattle, WA 98105
+        		</p>
+        	</div>
+        	<div class="col-lg-4">
+        		<h3>
+        		Parking
+        		</h3>
+        		<p>
+        		Open street parking is available in the U-District, while on campus self-serve and gatehouse parking information can be found <a href= "http://depts.washington.edu/thehub/home/directions/">here</a>. 
+        		For <a href= "http://tripplanner.kingcounty.gov/"> public transit </a> options, please use the address listed in order to find the best possible route from your location.
+        		</p>
+        	</div>
+        </div>
+      </div> 
     </section>
 
     <section id="tickets">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <img class="img-responsive" src="img/headings/tickets.png" alt="performance">
-            <hr class="star-primary">
+            <img class="img-responsive" src="img/headings/tickets.png" alt="tickets">
+							<div class="container" id="ticketinfo">
+								<img id="ticket-img" src="img/graphics/ticketman.png" alt="tickets">
+								<div id="ticket-text">
+									<h3>
+									Pre-sale Tickets
+									</h3>
+									<p>
+									We'll be employing a ticket system for games and food at Matsuri. Presale tickets will be available at the JSA booth in UW's Red Square Mon-Fri, 10:30AM-2:30PM. For every $10 you spend, you'll also receive an extra game voucher. 
+									</p>
+									<h3>
+									Day of Matsuri
+									</h3>
+									<p>
+									Tickets can also be purchased on the day of the event, but will be subject to the HUB transaction fee.
+									</p>
+								</div>
+							</div>
           </div>
         </div>
       </div>
@@ -231,7 +292,6 @@
             <div class="container logo">
               <img class="img-responsive soy" src="img/logos/SoySource.png" />
             </div>
-            <hr class="star-primary">
           </div>
         </div>
       </div>
@@ -255,7 +315,6 @@
               <a class="social">
               <img class="img-responsive" src="img/social media/snapchat.png"/>
               </a>-->
-              <hr class="star-primary">
           </div>
         </div>
       </div>
@@ -271,7 +330,7 @@
                 If you have any questions or comments, feel free to contact us at:
                 <br>
                 <br>
-                jsa@uw
+                jsa@uw.edu
                 <br>
                 <br>
                 or message us on Facebook:
@@ -279,7 +338,6 @@
                 Japanese Student Association at the University of Washington
               </p>
             </div>
-            <hr class="star-primary">
           </div>
         </div>
       </div>
